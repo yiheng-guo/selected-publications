@@ -601,33 +601,6 @@ module.exports = [
         "awards": []
     },
     {
-        "title": "Runtime Permission Issues in Android Apps: Taxonomy, Practices, and Ways Forward.",
-        "date": "2021-01-01",
-        "authors": [
-            "Ying Wang",
-            "Yibo Wang",
-            "Sinan Wang",
-            "Yepang Liu",
-            "Chang Xu",
-            "Shing-Chi Cheung",
-            "Hai Yu",
-            "Zhiliang Zhu"
-        ],
-        "venue": "IEEE Transactions on Software Engineering",
-        "venueShort": "TSE",
-        "abstract": "Android introduces a new permission model that allows apps to request permissions at runtime rather than at the installation time since 6.0 (Marshmallow, API level 23). While this runtime permission model provides users with greater flexibility in controlling an app's access to sensitive data and system features, it brings new challenges to app development. First, as users may grant or revoke permissions at any time while they are using an app, developers need to ensure that the app properly checks and requests required permissions before invoking any permission-protected APIs. Second, Android's permission mechanism keeps evolving and getting customized by device manufacturers. Developers are expected to comprehensively test their apps on different Android versions and device models to make sure permissions are properly requested in all situations. Unfortunately, these requirements are often impractical for developers. In practice, many Android apps suffer from various runtime permission issues (ARP issues). While existing studies have explored ARP issues, the understanding of such issues is still preliminary. To better characterize ARP issues, we performed an empirical study using 135 Stack Overflow posts that discuss ARP issues and 199 real ARP issues archived in popular open-source Android projects on GitHub. Via analyzing the data, we observed 11 types of ARP issues that commonly occur in Android apps. For each type of issues, we systematically studied: (1) how they can be manifested, (2) how pervasive and serious they are in real-world apps, and (3) how they can be fixed. We also analyzed the evolution trend of different types of issues from 2015 to 2020 to understand their impact on the Android ecosystem. Furthermore, we conducted a field survey and in-depth interviews among the practitioners from open-source community and industry, to gain insights from practitioners’ practices and learn their requirements of tools that can help combat ARP issues. Finally, to understand the strengths and weaknesses of the existing tools that can detect ARP issues, we built <sc xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">ARPBench</small> , an open benchmark consisting of 94 real ARP issues, and evaluated the performance of three available tools. The experimental results indicate that the existing tools have very limited supports for detecting our observed issue types and report a large number of false alarms. We further analyzed the tools’ limitations and summarized the challenges of designing an effective ARP issue detection technique. We hope that our findings can shed light on future research and provide useful guidance to practitioners.",
-        "tags": [
-            "Android",
-            "Empirical study",
-            "Security",
-            "Testing"
-        ],
-        "arxivUrl": "",
-        "paperUrl": "https://doi.org/10.1109/TSE.2022.3148258",
-        "bibtex": "@article{DBLP:journals/tse/WangWWLXCYZ23,\n  author       = {Ying Wang and\n                  Yibo Wang and\n                  Sinan Wang and\n                  Yepang Liu and\n                  Chang Xu and\n                  Shing{-}Chi Cheung and\n                  Hai Yu and\n                  Zhiliang Zhu},\n  title        = {Runtime Permission Issues in Android Apps: Taxonomy, Practices, and\n                  Ways Forward},\n  journal      = {{IEEE} Trans. Software Eng.},\n  volume       = {49},\n  number       = {1},\n  pages        = {185--210},\n  year         = {2023},\n  url          = {https://doi.org/10.1109/TSE.2022.3148258},\n  doi          = {10.1109/TSE.2022.3148258},\n  timestamp    = {Thu, 21 Nov 2024 00:00:00 +0100},\n  biburl       = {https://dblp.org/rec/journals/tse/WangWWLXCYZ23.bib},\n  bibsource    = {dblp computer science bibliography, https://dblp.org}\n}",
-        "awards": []
-    },
-    {
         "title": "Plumber: Boosting the Propagation of Vulnerability Fixes in the npm Ecosystem.",
         "date": "2023",
         "authors": [
@@ -825,31 +798,6 @@ module.exports = [
         "awards": []
     },
     {
-        "title": "SemMT: A Semantic-Based Testing Approach for Machine Translation Systems.",
-        "date": "2020-01-01",
-        "authors": [
-            "Jialun Cao",
-            "Meiziniu Li",
-            "Yeting Li",
-            "Ming Wen",
-            "Shing-Chi Cheung",
-            "Haiming Chen"
-        ],
-        "venue": "ACM Transactions on Software Engineering and Methodology",
-        "venueShort": "TOSEM",
-        "abstract": "Machine translation has wide applications in daily life. In mission-critical applications such as translating official documents, incorrect translation can have unpleasant or sometimes catastrophic consequences. This motivates recent research on the testing methodologies for machine translation systems. Existing methodologies mostly rely on metamorphic relations designed at the textual level (e.g., Levenshtein distance) or syntactic level (e.g., distance between grammar structures) to determine the correctness of translation results. However, these metamorphic relations do not consider whether the original and the translated sentences have the same meaning (i.e., semantic similarity). To address this problem, in this article we propose SemMT, an automatic testing approach for machine translation systems based on semantic similarity checking. SemMT applies round-trip translation and measures the semantic similarity between the original and the translated sentences. Our insight is that the semantics concerning logical relations and quantifiers in sentences can be captured by regular expressions (or deterministic finite automata) where efficient semantic equivalence/similarity checking algorithms can be applied. Leveraging the insight, we propose three semantic similarity metrics and implement them in SemMT. We compared SemMT with related state-of-the-art testing techniques, demonstrating the effectiveness of mistranslation detection. The experiment results show that SemMT outperforms existing metrics, achieving an increase of 34.2% and 15.4% on accuracy and F-score, respectively. We also study the possibility of further enhancing the performance by combining various metrics. Finally, we discuss a solution to locate the suspicious trip in round-trip translation, which provides hints for bug diagnosis.",
-        "tags": [
-            "Metamorphic Testing",
-            "Machine Translation",
-            "Semantic Similarity",
-            "Regular expression"
-        ],
-        "arxivUrl": "",
-        "paperUrl": "https://doi.org/10.1145/3490488",
-        "bibtex": "@article{DBLP:journals/tosem/CaoLLWCC22,\n  author       = {Jialun Cao and\n                  Meiziniu Li and\n                  Yeting Li and\n                  Ming Wen and\n                  Shing{-}Chi Cheung and\n                  Haiming Chen},\n  title        = {SemMT: {A} Semantic-Based Testing Approach for Machine Translation\n                  Systems},\n  journal      = {{ACM} Trans. Softw. Eng. Methodol.},\n  volume       = {31},\n  number       = {2},\n  pages        = {34e:1--34e:36},\n  year         = {2022},\n  url          = {https://doi.org/10.1145/3490488},\n  doi          = {10.1145/3490488},\n  timestamp    = {Thu, 22 May 2025 01:00:00 +0200},\n  biburl       = {https://dblp.org/rec/journals/tosem/CaoLLWCC22.bib},\n  bibsource    = {dblp computer science bibliography, https://dblp.org}\n}",
-        "awards": []
-    },
-    {
         "title": "APER: Evolution-Aware Runtime Permission Misuse Detection for Android Apps.",
         "date": "2022",
         "authors": [
@@ -974,6 +922,33 @@ module.exports = [
         "awards": []
     },
     {
+        "title": "Runtime Permission Issues in Android Apps: Taxonomy, Practices, and Ways Forward.",
+        "date": "2021-01-01",
+        "authors": [
+            "Ying Wang",
+            "Yibo Wang",
+            "Sinan Wang",
+            "Yepang Liu",
+            "Chang Xu",
+            "Shing-Chi Cheung",
+            "Hai Yu",
+            "Zhiliang Zhu"
+        ],
+        "venue": "IEEE Transactions on Software Engineering",
+        "venueShort": "TSE",
+        "abstract": "Android introduces a new permission model that allows apps to request permissions at runtime rather than at the installation time since 6.0 (Marshmallow, API level 23). While this runtime permission model provides users with greater flexibility in controlling an app's access to sensitive data and system features, it brings new challenges to app development. First, as users may grant or revoke permissions at any time while they are using an app, developers need to ensure that the app properly checks and requests required permissions before invoking any permission-protected APIs. Second, Android's permission mechanism keeps evolving and getting customized by device manufacturers. Developers are expected to comprehensively test their apps on different Android versions and device models to make sure permissions are properly requested in all situations. Unfortunately, these requirements are often impractical for developers. In practice, many Android apps suffer from various runtime permission issues (ARP issues). While existing studies have explored ARP issues, the understanding of such issues is still preliminary. To better characterize ARP issues, we performed an empirical study using 135 Stack Overflow posts that discuss ARP issues and 199 real ARP issues archived in popular open-source Android projects on GitHub. Via analyzing the data, we observed 11 types of ARP issues that commonly occur in Android apps. For each type of issues, we systematically studied: (1) how they can be manifested, (2) how pervasive and serious they are in real-world apps, and (3) how they can be fixed. We also analyzed the evolution trend of different types of issues from 2015 to 2020 to understand their impact on the Android ecosystem. Furthermore, we conducted a field survey and in-depth interviews among the practitioners from open-source community and industry, to gain insights from practitioners’ practices and learn their requirements of tools that can help combat ARP issues. Finally, to understand the strengths and weaknesses of the existing tools that can detect ARP issues, we built <sc xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">ARPBench</small> , an open benchmark consisting of 94 real ARP issues, and evaluated the performance of three available tools. The experimental results indicate that the existing tools have very limited supports for detecting our observed issue types and report a large number of false alarms. We further analyzed the tools’ limitations and summarized the challenges of designing an effective ARP issue detection technique. We hope that our findings can shed light on future research and provide useful guidance to practitioners.",
+        "tags": [
+            "Android",
+            "Empirical study",
+            "Security",
+            "Testing"
+        ],
+        "arxivUrl": "",
+        "paperUrl": "https://doi.org/10.1109/TSE.2022.3148258",
+        "bibtex": "@article{DBLP:journals/tse/WangWWLXCYZ23,\n  author       = {Ying Wang and\n                  Yibo Wang and\n                  Sinan Wang and\n                  Yepang Liu and\n                  Chang Xu and\n                  Shing{-}Chi Cheung and\n                  Hai Yu and\n                  Zhiliang Zhu},\n  title        = {Runtime Permission Issues in Android Apps: Taxonomy, Practices, and\n                  Ways Forward},\n  journal      = {{IEEE} Trans. Software Eng.},\n  volume       = {49},\n  number       = {1},\n  pages        = {185--210},\n  year         = {2023},\n  url          = {https://doi.org/10.1109/TSE.2022.3148258},\n  doi          = {10.1109/TSE.2022.3148258},\n  timestamp    = {Thu, 21 Nov 2024 00:00:00 +0100},\n  biburl       = {https://dblp.org/rec/journals/tse/WangWWLXCYZ23.bib},\n  bibsource    = {dblp computer science bibliography, https://dblp.org}\n}",
+        "awards": []
+    },
+    {
         "title": "Characterizing Transaction-Reverting Statements in Ethereum Smart Contracts.",
         "date": "2021",
         "authors": [
@@ -996,6 +971,31 @@ module.exports = [
         "arxivUrl": "",
         "paperUrl": "https://doi.org/10.1109/ASE51524.2021.9678597",
         "bibtex": "@inproceedings{DBLP:conf/kbse/LiuWZ00C21,\n  author       = {Lu Liu and\n                  Lili Wei and\n                  Wuqi Zhang and\n                  Ming Wen and\n                  Yepang Liu and\n                  Shing{-}Chi Cheung},\n  title        = {Characterizing Transaction-Reverting Statements in Ethereum Smart\n                  Contracts},\n  booktitle    = {36th {IEEE/ACM} International Conference on Automated Software Engineering,\n                  {ASE} 2021, Melbourne, Australia, November 15-19, 2021},\n  pages        = {630--641},\n  publisher    = {{IEEE}},\n  year         = {2021},\n  url          = {https://doi.org/10.1109/ASE51524.2021.9678597},\n  doi          = {10.1109/ASE51524.2021.9678597},\n  timestamp    = {Fri, 16 May 2025 01:00:00 +0200},\n  biburl       = {https://dblp.org/rec/conf/kbse/LiuWZ00C21.bib},\n  bibsource    = {dblp computer science bibliography, https://dblp.org}\n}",
+        "awards": []
+    },
+    {
+        "title": "SemMT: A Semantic-Based Testing Approach for Machine Translation Systems.",
+        "date": "2020-01-01",
+        "authors": [
+            "Jialun Cao",
+            "Meiziniu Li",
+            "Yeting Li",
+            "Ming Wen",
+            "Shing-Chi Cheung",
+            "Haiming Chen"
+        ],
+        "venue": "ACM Transactions on Software Engineering and Methodology",
+        "venueShort": "TOSEM",
+        "abstract": "Machine translation has wide applications in daily life. In mission-critical applications such as translating official documents, incorrect translation can have unpleasant or sometimes catastrophic consequences. This motivates recent research on the testing methodologies for machine translation systems. Existing methodologies mostly rely on metamorphic relations designed at the textual level (e.g., Levenshtein distance) or syntactic level (e.g., distance between grammar structures) to determine the correctness of translation results. However, these metamorphic relations do not consider whether the original and the translated sentences have the same meaning (i.e., semantic similarity). To address this problem, in this article we propose SemMT, an automatic testing approach for machine translation systems based on semantic similarity checking. SemMT applies round-trip translation and measures the semantic similarity between the original and the translated sentences. Our insight is that the semantics concerning logical relations and quantifiers in sentences can be captured by regular expressions (or deterministic finite automata) where efficient semantic equivalence/similarity checking algorithms can be applied. Leveraging the insight, we propose three semantic similarity metrics and implement them in SemMT. We compared SemMT with related state-of-the-art testing techniques, demonstrating the effectiveness of mistranslation detection. The experiment results show that SemMT outperforms existing metrics, achieving an increase of 34.2% and 15.4% on accuracy and F-score, respectively. We also study the possibility of further enhancing the performance by combining various metrics. Finally, we discuss a solution to locate the suspicious trip in round-trip translation, which provides hints for bug diagnosis.",
+        "tags": [
+            "Metamorphic Testing",
+            "Machine Translation",
+            "Semantic Similarity",
+            "Regular expression"
+        ],
+        "arxivUrl": "",
+        "paperUrl": "https://doi.org/10.1145/3490488",
+        "bibtex": "@article{DBLP:journals/tosem/CaoLLWCC22,\n  author       = {Jialun Cao and\n                  Meiziniu Li and\n                  Yeting Li and\n                  Ming Wen and\n                  Shing{-}Chi Cheung and\n                  Haiming Chen},\n  title        = {SemMT: {A} Semantic-Based Testing Approach for Machine Translation\n                  Systems},\n  journal      = {{ACM} Trans. Softw. Eng. Methodol.},\n  volume       = {31},\n  number       = {2},\n  pages        = {34e:1--34e:36},\n  year         = {2022},\n  url          = {https://doi.org/10.1145/3490488},\n  doi          = {10.1145/3490488},\n  timestamp    = {Thu, 22 May 2025 01:00:00 +0200},\n  biburl       = {https://dblp.org/rec/journals/tosem/CaoLLWCC22.bib},\n  bibsource    = {dblp computer science bibliography, https://dblp.org}\n}",
         "awards": []
     }
 ]
