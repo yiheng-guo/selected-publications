@@ -5,8 +5,8 @@ env:
 
 on:
   schedule:
-    # 每两周的周一凌晨2点运行
-    - cron: '0 2 * * 1/2'
+    # 每两周一次（周一凌晨2点）
+    - cron: '0 2 */14 * 1'
   workflow_dispatch:
 
 permissions:
@@ -93,13 +93,35 @@ jobs:
           PY
 
           echo "Using config: $CI_CONFIG_FILE"
-          ./sp --config "$CI_CONFIG_FILE"
+          attempt=1
+          max_attempts=3
+          while [ "$attempt" -le "$max_attempts" ]; do
+            echo "Running scraper (attempt $attempt/$max_attempts)..."
+            if ./sp --config "$CI_CONFIG_FILE"; then
+              break
+            fi
+
+            if [ "$attempt" -lt "$max_attempts" ]; then
+              echo "Scraper failed. Waiting 3 minutes before retry..."
+              sleep 180
+            else
+              echo "Scraper failed after $max_attempts attempts. Skipping scrape."
+              echo "SCRAPER_SKIPPED=true" >> "$GITHUB_ENV"
+            fi
+
+            attempt=$((attempt + 1))
+          done
 
 
 
       - name: Check for changes to commit
         id: check_changes
         run: |
+          if [ "${SCRAPER_SKIPPED}" = "true" ]; then
+            echo "changes_detected=false" >> $GITHUB_OUTPUT
+            echo "Scraper skipped; treating as no changes."
+            exit 0
+          fi
           git add -A
           if git diff --cached --quiet; then
             echo "changes_detected=false" >> $GITHUB_OUTPUT
